@@ -2,14 +2,14 @@ import React from 'react';
 
 
 const ShowDiag =(props)=>(
-    <div>
+    <ul>
     {
     props.data.map((d,i)=>(
-        <li key={i}>{d.code}==={d.name}</li>
+        <li key={i}>{i}) {d.code}==={d.name}</li>
     ))
     }
    
-    </div>
+    </ul>
    
 )
 

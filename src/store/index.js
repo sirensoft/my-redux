@@ -4,6 +4,6 @@ import thunk from  'redux-thunk';
 
 import  reducers  from './combineReducer' 
 
-let middleWare = applyMiddleware(thunk) ;
+let middleWare = applyMiddleware(logger,thunk) ;
 
 export default createStore(reducers,middleWare);
