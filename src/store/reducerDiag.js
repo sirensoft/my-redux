@@ -1,7 +1,7 @@
 
 export default (state=[],action)=>{
     switch (action.type) {
-        case "Add":
+        case "DxAdd":
             state.push(action.payload)
             break;
     

@@ -63,7 +63,7 @@ const mapStateToProps = (state)=>{
     return{
         Add:(payload)=>{
             dispatch({
-                type:"Add",
+                type:"DxAdd",
                 payload:payload
             })
         }
