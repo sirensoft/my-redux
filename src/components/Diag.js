@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import * as Actions from './Actions';
 
 
 class Diag extends Component {
@@ -24,13 +25,10 @@ class Diag extends Component {
 
   onSubmit=(e)=>{
     e.preventDefault();
-    this.props.dispatch({
-        type:'DxAdd',
-        payload:{
-            code:this.state.code,
-            name:this.state.name
-        }
-    })
+    this.props.dispatch(Actions.DxAdd({
+        code:this.state.code,
+        name:this.state.name
+    }))
     this.setState({
        code:'',
        name:''
