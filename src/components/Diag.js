@@ -24,9 +24,12 @@ class Diag extends Component {
 
   onSubmit=(e)=>{
     e.preventDefault();
-    this.props.Add({
-        code:this.state.code,
-        name:this.state.name       
+    this.props.dispatch({
+        type:'DxAdd',
+        payload:{
+            code:this.state.code,
+            name:this.state.name
+        }
     })
     this.setState({
        code:'',
@@ -59,16 +62,6 @@ const mapStateToProps = (state)=>{
     }
   }
 
-  const mapDispatchToProps =(dispatch)=>{
-    return{
-        Add:(payload)=>{
-            dispatch({
-                type:"DxAdd",
-                payload:payload
-            })
-        }
-      
-    }
-  }
+  
 
-export default connect(mapStateToProps,mapDispatchToProps)(Diag);
+export default connect(mapStateToProps)(Diag);
